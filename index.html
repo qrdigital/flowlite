@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FlowLite™</title>
+<link rel="icon" href="favicon.png">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:680px;margin:auto;padding:30px 20px;color:#1a1a1a;background-color:#fafafa;line-height:1.6}
+h1{font-size:2rem;font-weight:800;letter-spacing:-0.5px;text-align:center;margin-top:10px;color:#111}
+h2{font-size:1.4rem;font-weight:700;text-align:center;color:#111;margin-bottom:20px}
+img{max-width:160px;display:block;margin:auto;margin-bottom:20px}
+.center{text-align:center}
+.sub{font-size:1.15rem;color:#555;margin-bottom:40px}
+
+.card{background:#fff;border:1px solid #e5e7eb;padding:24px;border-radius:12px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.card h2{text-align:left;margin-top:0;font-size:1.25rem;border-bottom:1px solid #f3f4f6;padding-bottom:10px}
+.card p{margin:10px 0;font-size:0.95rem;color:#4b5563}
+
+/* Grid para los 5 Principios */
+.grid-principios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 30px 0; }
+.card-principio { background: #fff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.card-principio h3 { margin-top: 0; color: #111; font-size: 1.1rem; }
+.card-principio p { font-size: 0.9rem; color: #4b5563; margin-bottom: 0; }
+
+.q{margin:25px 0;padding:24px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.q b{font-size:1.05rem;display:block;margin-bottom:15px;color:#111}
+label{display:flex;align-items:center;padding:12px 14px;margin:8px 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;cursor:pointer;font-size:0.95rem;transition:all 0.2s ease}
+label:hover{background:#f3f4f6;border-color:#d1d5db}
+input[type="radio"]{margin-right:12px;transform:scale(1.1);accent-color:#111}
+
+button.btn-main{display:block;width:100%;max-width:300px;margin:40px auto;background:#111;color:#fff;border:none;padding:14px 24px;font-size:1rem;font-weight:600;border-radius:8px;cursor:pointer;transition:background 0.2s;text-align:center}
+button.btn-main:hover{background:#333}
+
+#resultado{display:none;margin-top:30px;padding:30px;border:2px solid #111;background:#fff;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+#resultado h2{color:#111;font-size:1.6rem;text-align:left;margin-top:0}
+#resultado p{font-size:1rem;color:#374151;margin:12px 0}
+#resultado b{color:#111}
+
+.solucion-box{background:#f0f7ff;border-left:4px solid #3b82f6;padding:15px;border-radius:0 8px 8px 0;margin-top:15px}
+.solucion-box p{margin:0 !important;font-size:0.95rem !important;color:#1e3a8a !important}
+
+.cta-container{display:none;text-align:center;margin-top:30px;padding:20px 0}
+.cta-container p{font-size:1.05rem;font-weight:600;margin-bottom:15px}
+a.btn-ws{display:inline-block;background:#25D366;color:#fff;font-size:1.05rem;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 10px rgba(37,211,102,0.3);transition:transform 0.2s,background 0.2s}
+a.btn-ws:hover{background:#20ba59;transform:translateY(-1px)}
+</style>
+</head>
+<body>
+
+<img src="logo.jpg" alt="FlowLite">
+
+<h1>Ordena tu Operación, Escala tus resultados</h1>
+
+<p class="center sub">
+FlowLite se enfoca en identificar y corregir el desorden, la dependencia y los bloqueos que consumen tiempo, energía y capacidad de crecimiento.<br>
+</p>
+
+<div class="card">
+<h2>Los 5 Principios FlowLite</h2>
+<div class="grid-principios">
+    <div class="card-principio"><h3>1. Claridad de Dirección</h3><p>Identifica qué actividades generan resultados y cuáles solo consumen tiempo.</p></div>
+    <div class="card-principio"><h3>2. Planificación Anticipada</h3><p>Reduce urgencias, improvisación y cambios de prioridad constantes.</p></div>
+    <div class="card-principio"><h3>3. Ejecución Binaria</h3><p>Lógica simple: Logrado o No logrado. Sin medias tintas.</p></div>
+    <div class="card-principio"><h3>4. Dependencia Operativa</h3><p>Reduce cuellos de botella y distribuye responsabilidades correctamente.</p></div>
+    <div class="card-principio"><h3>5. Estabilidad del Sistema</h3><p>Procesos estables, menos vulnerables al caos diario.</p></div>
+</div>
+</div>
+
+<h2>Test de Diagnóstico Operativo</h2>
+<form id="test">
+<div class="q">
+<b>1. ¿Qué pasa más seguido en tu día a día?</b>
+<label><input type="radio" name="q1" value="A"> Cambiamos de prioridad a cada rato</label>
+<label><input type="radio" name="q1" value="B"> Todos me buscan para resolver cosas</label>
+<label><input type="radio" name="q1" value="C"> Trabajamos mucho pero avanzamos poco</label>
+<label><input type="radio" name="q1" value="D"> Nada de eso</label>
+</div>
+
+<div class="q">
+<b>2. Si te ausentaras una semana completa del negocio...</b>
+<label><input type="radio" name="q2" value="A"> Habría desorden total en las tareas</label>
+<label><input type="radio" name="q2" value="B"> Varias operaciones críticas se pararían</label>
+<label><input type="radio" name="q2" value="C"> Todo seguiría parecido, sin avanzar</label>
+<label><input type="radio" name="q2" value="D"> No habría ningún problema</label>
+</div>
+
+<div class="q">
+<b>3. ¿Qué frase describe mejor la situación actual?</b>
+<label><input type="radio" name="q3" value="A"> Tenemos demasiadas iniciativas abiertas y pocas terminadas</label>
+<label><input type="radio" name="q3" value="B"> Si yo no reviso el trabajo final, no me quedo tranquilo</label>
+<label><input type="radio" name="q3" value="C"> Los mismos problemas operativos vuelven a aparecer siempre</label>
+<label><input type="radio" name="q3" value="D"> Ninguna de las anteriores</label>
+</div>
+
+<div class="q">
+<b>4. ¿Qué es lo que más te genera frustración?</b>
+<label><input type="radio" name="q4" value="A"> Las urgencias constantes que rompen la agenda</label>
+<label><input type="radio" name="q4" value="B"> Que absolutamente todo dependa de mi aprobación</label>
+<label><input type="radio" name="q4" value="C"> Tener que resolver el mismo error una y otra vez</label>
+<label><input type="radio" name="q4" value="D"> Nada de eso</label>
+</div>
+
+<div class="q">
+<b>5. Al terminar la semana laboral, sientes que...</b>
+<label><input type="radio" name="q5" value="A"> Hicimos mucho, pero no avanzamos en lo importante</label>
+<label><input type="radio" name="q5" value="B"> Apagué incendios todo el tiempo y postergué mis cosas</label>
+<label><input type="radio" name="q5" value="C"> El equipo trabajó duro, pero el negocio sigue igual</label>
+<label><input type="radio" name="q5" value="D"> No me pasa eso</label>
+</div>
+
+<div class="q">
+<b>6. ¿Qué es lo que más limita el crecimiento de tu empresa?</b>
+<label><input type="radio" name="q6" value="A"> La falta de orden y estructura clara</label>
+<label><input type="radio" name="q6" value="B"> Que la operación completa dependa de mí</label>
+<label><input type="radio" name="q6" value="C"> Lo mucho que nos cuesta ejecutar los planes</label>
+<label><input type="radio" name="q6" value="D"> Ninguna de las anteriores</label>
+</div>
+
+<div class="q">
+<b>7. ¿Qué frase dirías hoy sin dudarlo?</b>
+<label><input type="radio" name="q7" value="A"> Siempre aparece algo imprevisto que cambia los planes</label>
+<label><input type="radio" name="q7" value="B"> Si me desconecto un día, las cosas se complican rápido</label>
+<label><input type="radio" name="q7" value="C"> Hace tiempo que el negocio no da un salto importante</label>
+<label><input type="radio" name="q7" value="D"> Ninguna</label>
+</div>
+
+<button type="button" class="btn-main" onclick="calcular()">Ver Mi Diagnóstico</button>
+</form>
+
+<div id="resultado"></div>
+
+<div id="cta-whatsapp" class="cta-container">
+<p>¿Cómo resolvemos esto? Agenda una sesión para revisar tu diagnóstico:</p>
+<a id="btn-ws-link" class="btn-ws" href="#" target="_blank">Enviar Diagnóstico por WhatsApp</a>
+</div>
+
+<script>
+function calcular(){
+let c={A:0,B:0,C:0,D:0};
+for(let i=1;i<=7;i++){
+let r=document.querySelector(`input[name=q${i}]:checked`);
+if(!r){alert("Por favor, responde todas las preguntas.");return;}
+c[r.value]++;
+}
+let p=Object.keys(c).reduce((a,b)=>c[a]>c[b]?a:b);
+
+let perfiles={
+A:`<h2>Diagnóstico: Negocio Desordenado</h2>
+<p><b>Cómo se ve:</b> Tu negocio se mueve mucho, pero no siempre en la dirección correcta. El problema no es la falta de trabajo, sino que todo parece importante al mismo tiempo. Muchas cosas empiezan, pocas terminan de consolidarse.</p>
+<p><b>Cómo llegó aquí:</b> Durante años la capacidad de adaptarte fue una ventaja. Aceptaste clientes distintos y oportunidades que otros dejaban pasar. Lo que antes era adaptación hoy se ha convertido en dispersión.</p>
+<p><b>Lo que cuesta:</b></p>
+<ul style="margin-top:5px; padding-left:20px; color:#4b5563;"><li>Prioridades que cambian constantemente.</li><li>Proyectos inconclusos.</li><li>Sensación permanente de estar apagando incendios.</li><li>Equipos que no saben qué es realmente importante.</li><li>Mucho movimiento y poco avance.</li></ul>
+<p><i><b>Frase típica:</b> "Tenemos demasiadas cosas por hacer y nunca alcanza el tiempo."</i></p>
+<div class="solucion-box"><p><b>La Solución FlowLite:</b> Necesitas implementar el <b>Principio 1 y 2 (Claridad de Dirección y Planificación Anticipada)</b> para fijar objetivos semanales que protejan al equipo de las distracciones.</p></div>`,
+
+B:`<h2>Diagnóstico: Negocio Saturado</h2>
+<p><b>Cómo se ve:</b> El negocio funciona, vende y produce. El problema es que gran parte de la operación sigue dependiendo de una sola persona. Las decisiones, problemas y urgencias pasan por el dueño.</p>
+<p><b>Cómo llegó aquí:</b> Cuando el negocio era pequeño, resolver todo personalmente era una ventaja. El negocio creció alrededor de tu capacidad para resolver problemas. Ahora esa misma fortaleza se ha convertido en un cuello de botella.</p>
+<p><b>Lo que cuesta:</b></p>
+<ul style="margin-top:5px; padding-left:20px; color:#4b5563;"><li>Jornadas largas.</li><li>Dificultad para desconectarse.</li><li>Dependencia excesiva del dueño.</li><li>Lentitud en la toma de decisiones.</li><li>Crecimiento limitado por el tiempo disponible.</li></ul>
+<p><i><b>Frase típica:</b> "Si yo no estoy, las cosas no salen igual."</i></p>
+<div class="solucion-box"><p><b>La Solución FlowLite:</b> Tu prioridad absoluta es el <b>Principio 4 (Dependencia Operativa)</b>. Necesitamos estructurar procesos para que el equipo resuelva sin que seas el cuello de botella.</p></div>`,
+
+C:`<h2>Diagnóstico: Negocio Estancado</h2>
+<p><b>Cómo se ve:</b> El negocio trabaja, los pedidos salen, pero los resultados se parecen demasiado a los del año pasado. Hay actividad constante, pero poca sensación de progreso. Se trabaja mucho para mantener el nivel, pero poco cambia.</p>
+<p><b>Cómo llegó aquí:</b> Para sobrevivir aprendiste a resolver lo urgente. La operación se llenó de tareas repetitivas y problemas recurrentes. La mayor parte de la energía se consume manteniendo el negocio funcionando en lugar de mejorarlo.</p>
+<p><b>Lo que cuesta:</b></p>
+<ul style="margin-top:5px; padding-left:20px; color:#4b5563;"><li>Pocos avances reales.</li><li>Problemas que vuelven a aparecer.</li><li>Proyectos que nunca terminan.</li><li>Reuniones sin seguimiento.</li><li>Mucho esfuerzo para resultados similares.</li></ul>
+<p><i><b>Frase típica:</b> "Trabajamos igual o más que antes, pero no sentimos que estemos creciendo."</i></p>
+<div class="solucion-box"><p><b>La Solución FlowLite:</b> Tu negocio requiere aplicar el <b>Principio 3 y 5 (Ejecución Binaria y Estabilidad del Sistema)</b> para romper el bucle de apagar incendios y estandarizar lo que sí genera dinero.</p></div>`,
+
+D:`<h2>Diagnóstico: Operación Estable</h2>
+<p>No se detectan señales de caos operativo críticas según los perfiles de FlowLite.</p>
+<div class="solucion-box"><p><b>Recomendación:</b> Mantener la estabilidad exige auditorías. Si buscas optimizar la eficiencia para una escala mayor, hablemos.</p></div>`
+};
+
+let textosWhatsApp = {
+A: "Hola, hice el test FlowLite y salí como Negocio Desordenado. Quiero ver cómo ordenar mis prioridades.",
+B: "Hola, hice el test FlowLite y salí como Negocio Saturado. Quiero liberar mi tiempo de la operación.",
+C: "Hola, hice el test FlowLite y salí como Negocio Estancado. Quiero romper el bucle de apagar incendios.",
+D: "Hola, hice el test FlowLite y salí con Operación Estable. Quiero optimizar mi estructura."
+};
+
+let resDiv = document.getElementById("resultado");
+resDiv.style.display = "block";
+resDiv.innerHTML = perfiles[p];
+document.getElementById("btn-ws-link").href = `https://wa.me/51928644516?text=${encodeURIComponent(textosWhatsApp[p])}`;
+document.getElementById("cta-whatsapp").style.display = "block";
+resDiv.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
